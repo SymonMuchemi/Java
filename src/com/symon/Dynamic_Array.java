@@ -4,7 +4,7 @@ public class Dynamic_Array {
     int size;
     int capacity = 0;
     Object[] array;
-
+    @SuppressWarnings("unused")
     public Dynamic_Array(){
         this.array = new Object[capacity];
     }
@@ -12,27 +12,28 @@ public class Dynamic_Array {
         this.capacity = capacity;
         this.array = new Object[capacity];
     }
-    public void grow(){
+    public int grow(){
         capacity *= 2;
         Object[] newArray = new Object[capacity];
-        for (int i = 0; i < size; i++) {
-            newArray[i] = array[i];
-        }
+        if (size >= 0) System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
+        return capacity;
     }
-    public void shrink(){
+    public int shrink(){
         capacity /= 2;
         Object[] newArray = new Object[capacity];
-        for (int i = 0; i < size; i++) {
-            newArray[i] = array[i];
-        }
+        if (size >= 0) System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
+
+        return capacity;
     }
-    public void add(Object data){
+    public int add(Object data){
         if (size >= capacity)
             grow();
         array[size] = data;
         size++;
+
+        return size;
     }
     public int remove(Object data){
         int index = -1;
@@ -60,33 +61,20 @@ public class Dynamic_Array {
     public boolean isEmpty(){
         return size == 0;
     }
-    public void printArray(){
-        String string = "";
-        int i = 0;
+    public short printArray(){
+        StringBuilder string = new StringBuilder();
+        short i = 0;
         for (; i < size; i++) {
-            string += array[i] + ", ";
+            string.append(array[i]).append(", ");
         }
         if (!string.isEmpty()){
-            string = "[" + string.substring(0, string.length() - 2) + "]";
+            string = new StringBuilder("[" + string.substring(0, string.length() - 2) + "]");
         }
         else {
-            string = "[]";
+            string = new StringBuilder("[]");
         }
 
         System.out.println(string);
-    }
-
-    public static void main(String[] args) {
-        Dynamic_Array dynamic_array = new Dynamic_Array(5);
-        System.out.println(dynamic_array.capacity);
-        System.out.println(dynamic_array.size);
-
-        dynamic_array.add(20);
-        dynamic_array.add(10);
-        dynamic_array.add(5);
-        dynamic_array.add(63);
-
-        System.out.println(dynamic_array.isEmpty());
-        dynamic_array.printArray();
+        return i;
     }
 }
