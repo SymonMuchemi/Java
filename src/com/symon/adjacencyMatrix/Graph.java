@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.adjacencyMatrix;
 
 import java.util.ArrayList;
 
