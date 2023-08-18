@@ -1,6 +1,8 @@
-package com.symon.adjacencyMatrix;
+package com.symon.breadthFirstSearch;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Graph {
     ArrayList<Node> nodes = new ArrayList<>();
@@ -18,10 +20,6 @@ public class Graph {
     public void addNode(Node node){
         nodes.add(node);
     }
-    public void DepthFirstSearch(int src){
-        boolean[] visited = new boolean[matrix.length];
-        DFSHelper(src, visited);
-    }
     public void printMatrix(){
         System.out.print("  ");
         for (Node node : nodes) {
@@ -37,20 +35,24 @@ public class Graph {
         }
         System.out.println();
     }
-    public void DFSHelper(int src, boolean[] visited){
-        if (visited[src]){
-            return;
-        }
-        else {
-            visited[src] = true;
+    public void breadthFirstSearch(int src){
+        Queue<Integer> queue = new LinkedList<>();
+        boolean[] visited = new boolean[matrix.length];
+
+        queue.offer(src);
+        visited[src] = true;
+
+        while (queue.size() > 0){
+            src = queue.peek();
             System.out.println(nodes.get(src).data + " = visited");
-        }
-        for (int i = 0; i < matrix[src].length; i++) {
-            if (matrix[src][i] == 1){
-                DFSHelper(i, visited);
+
+            for (int i = 0; i < 5; i++) {
+                if (matrix[src][i] == 1 && !visited[i]){
+                    queue.offer(i);
+                    visited[i] = true;
+                }
             }
+            queue.poll();
         }
     }
-
-
 }

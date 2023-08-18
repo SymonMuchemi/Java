@@ -1,4 +1,4 @@
-package com.symon.adjacencyMatrix;
+package com.symon.breadthFirstSearch;
 
 public class Node {
     char data;

@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.arrays;
 
 public class DynamicArray {
     int size;

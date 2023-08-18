@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.searches;
 
 import java.util.Arrays;
 import java.util.Random;

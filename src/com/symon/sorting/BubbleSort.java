@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.sorting;
 
 import java.util.Arrays;
 import java.util.Random;
