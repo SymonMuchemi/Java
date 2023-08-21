@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.data_structures.recursion;
 
 public class Recursions {
     public static int factorial(int n){

@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.data_structures.arrays;
 
 public class Main {
     public static void main(String[] args) {

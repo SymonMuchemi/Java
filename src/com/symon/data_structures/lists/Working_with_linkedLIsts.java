@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.data_structures.lists;
 
 import java.util.LinkedList;
 

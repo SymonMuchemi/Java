@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.data_structures.arrays;
 
 import java.util.Arrays;
 

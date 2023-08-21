@@ -1,4 +1,4 @@
-package com.symon.adjacencyMatrix;
+package com.symon.data_structures.adjacencyMatrix;
 
 public class Node {
     char data;

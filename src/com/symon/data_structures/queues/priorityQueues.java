@@ -1,4 +1,4 @@
-package com.symon;
+package com.symon.data_structures.queues;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
