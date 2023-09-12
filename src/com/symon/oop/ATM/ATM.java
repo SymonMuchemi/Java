@@ -13,7 +13,7 @@ public class ATM {
         this.balance = initialBalance;
     }
 
-    // Check account balance method
+    // FileOperations account balance method
     public double getBalance() {
         return balance;
     }

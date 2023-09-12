@@ -13,7 +13,7 @@ public class Main {
 
         if (user.authenticatePin(enteredPin)){
             System.out.println("\nATM Menu:");
-            System.out.println("1. Check Balance");
+            System.out.println("1. FileOperations Balance");
             System.out.println("2. Deposit Money");
             System.out.println("3. Withdraw Money");
             System.out.println("4. Exit");
