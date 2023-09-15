@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class Main {
+public class Filter {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(
                 10, 15, 20, 30, 35, 40
@@ -74,6 +74,21 @@ public class Main {
         // filtering without collecting
         System.out.println();
         words.stream().filter(Objects::nonNull).forEach(System.out::println);
-    }
+
+        List<Person> people = List.of(
+                new Person("Simon Muchemi", 20, Gender.MALE),
+                new Person("Franklin Roosevelt", 80, Gender.MALE),
+                new Person("Booker T Washington", 50, Gender.MALE),
+                new Person("D.E.B Du Bois", 55, Gender.MALE),
+                new Person("Marylynne Monroe", 45, Gender.FEMALE),
+                new Person("Jane Doe", 59, Gender.FEMALE),
+                new Person("Jeniffer Lopez", 59, Gender.FEMALE)
+        );
+
+        List<Person> oldPeople = people.stream().filter(elder -> elder.age > 50).collect(Collectors.toList());
+
+        System.out.println("Elders");
+        oldPeople.forEach(elder -> System.out.println(elder.name + elder.gender + elder.age));
+     }
 
 }
