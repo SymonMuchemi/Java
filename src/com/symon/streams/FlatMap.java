@@ -14,6 +14,7 @@ public class FlatMap {
         // using flatMap to join the lists
         List<List<Integer>> finalList = Arrays.asList(list1, list2, list3);
         List<Integer> combinedList;
+        List<Integer> combinedListEdited;
         /*
         Using .stream
         combinedList = finalList.stream()
@@ -24,8 +25,13 @@ public class FlatMap {
         // shorter method
         combinedList = finalList.stream().flatMap(Collection::stream).toList();
 
+        // editing the elements of the final list
+        combinedListEdited = finalList.stream().flatMap(list -> list.stream().map(element -> element * 10)).toList();
+
+
         System.out.println("Final and combined list:");
 //        combinedList.forEach(System.out::println);
         System.out.println(combinedList);
+        System.out.println(combinedListEdited);
     }
 }
