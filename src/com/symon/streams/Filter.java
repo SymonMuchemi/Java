@@ -38,6 +38,7 @@ public class Filter {
                 "Nebuchadnezzar",
                 "Disney",
                 "Franklin",
+                "Franklin",
                 "Churchill"
         );
         //goal: retrieve the names of length greater than 6 and less than 8
