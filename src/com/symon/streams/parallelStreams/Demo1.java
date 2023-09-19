@@ -49,8 +49,16 @@ public class Demo1 {
         //using parallel streams
         System.out.println("Using parallel streams");
         studentList.parallelStream()
-                    .filter(student -> student.getScore() >= 80)
+                .filter(student -> student.getScore() >= 80)
                 .limit(3)
                 .forEach(student -> System.out.printf("student = %s score -> %d\n", student.getName(), student.getScore()));
+
+        // converting stream to parallel stream
+        System.out.println("\nConverted stream to parallel stream");
+        studentList.stream()
+                .parallel()
+                .filter(student -> student.getScore() >= 80)
+                .limit(3)
+                .forEach(student ->  System.out.printf("student = %s score -> %d\n", student.getName(), student.getScore()));
     }
 }
