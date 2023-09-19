@@ -32,6 +32,7 @@ public class Demo1 {
         studentList = Arrays.asList(
                 new Student("James", 55),
                 new Student("Bob", 90),
+                new Student("Job", 80),
                 new Student("John", 65),
                 new Student("Erick", 82),
                 new Student("Susan", 88),
@@ -40,10 +41,16 @@ public class Demo1 {
         // filter the students with scores greater than 80
         // method 1
 
-        studentList.stream().filter(student -> student.score > 80)
+        studentList.stream()
+                    .filter(student -> student.score >= 80)
                     .limit(3)
-                    .forEach(student -> {
-                        System.out.printf("student = %s score -> %d\n", student.getName(), student.getScore() );
-                    });
+                    .forEach(student -> System.out.printf("student = %s score -> %d\n", student.getName(), student.getScore()));
+
+        //using parallel streams
+        System.out.println("Using parallel streams");
+        studentList.parallelStream()
+                    .filter(student -> student.getScore() >= 80)
+                .limit(3)
+                .forEach(student -> System.out.printf("student = %s score -> %d\n", student.getName(), student.getScore()));
     }
 }
