@@ -3,11 +3,11 @@ package com.symon.streams;
 import java.util.Random;
 
 public class NumberGenerator {
-    // returns an array of random numbers given the size
 
     public NumberGenerator() {
     }
 
+    // returns an array of random numbers given the size
     public Integer[] randomNumbers(int size, int limit){
         Random rand = new Random();
         Integer[] array = new Integer[size];
