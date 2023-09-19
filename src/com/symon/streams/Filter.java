@@ -65,7 +65,7 @@ public class Filter {
         // Filtering and collecting
         List<String> wordsWithoutNulls = words.stream()
                 .filter(Objects::nonNull)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("Initial list with null values" );
         words.forEach(System.out::println);
@@ -80,13 +80,14 @@ public class Filter {
                 new Person("Simon Muchemi", 20, Gender.MALE),
                 new Person("Franklin Roosevelt", 80, Gender.MALE),
                 new Person("Booker T Washington", 50, Gender.MALE),
+                new Person("Reymond Redington", 54, Gender.MALE),
                 new Person("D.E.B Du Bois", 55, Gender.MALE),
                 new Person("Marylynne Monroe", 45, Gender.FEMALE),
                 new Person("Jane Doe", 59, Gender.FEMALE),
                 new Person("Jeniffer Lopez", 59, Gender.FEMALE)
         );
 
-        List<Person> oldPeople = people.stream().filter(elder -> elder.age > 50).collect(Collectors.toList());
+        List<Person> oldPeople = people.stream().filter(elder -> elder.age > 50).toList();
 
         System.out.println("Elders");
         oldPeople.forEach(elder -> System.out.println(elder.name + elder.gender + elder.age));
