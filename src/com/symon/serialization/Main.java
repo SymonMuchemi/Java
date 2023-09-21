@@ -18,7 +18,7 @@ public class Main {
 
         user.sayHello();
 
-        FileOutputStream fileOut = new FileOutputStream("userInfo.ser");
+        FileOutputStream fileOut = new FileOutputStream("userInfo2.ser");
         ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
 
         objectOut.writeObject(user);
