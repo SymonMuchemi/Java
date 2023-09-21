@@ -1,4 +1,4 @@
-package com.symon.serialization;
+package com.symon.deserialization;
 
 import java.io.Serializable;
 
