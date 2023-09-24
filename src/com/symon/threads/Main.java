@@ -7,6 +7,7 @@ public class Main {
     // a thread is created and controlled by the java.lang.Thread class
     public static void main(String[] args) {
 //        System.out.print(Thread.activeCount());
+        Thread.currentThread().setName("Main thread");
         System.out.print(Thread.currentThread().getName());
     }
 }
