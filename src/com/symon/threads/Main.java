@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args) {
 //        System.out.print(Thread.activeCount());
         Thread.currentThread().setName("Main thread");
-        System.out.print(Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().getName());
+
+        // checking the priority of a thread
+        System.out.println(Thread.currentThread().getPriority());
     }
 }
