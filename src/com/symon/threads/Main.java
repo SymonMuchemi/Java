@@ -17,5 +17,8 @@ public class Main {
         // changing the priority of the current thread
         Thread.currentThread().setPriority(2);
         System.out.println(Thread.currentThread().getPriority());
+
+        //checking if thread is alive
+        System.out.println(Thread.currentThread().isAlive());
     }
 }
