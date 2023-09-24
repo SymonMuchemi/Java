@@ -35,5 +35,12 @@ public class Main {
         MyThread myThread = new MyThread();
         myThread.start();
         System.out.println(myThread.isAlive());
+
+        // getting the name of the newly created thread
+        System.out.println(myThread.getName());
+
+        // naming the thread
+        myThread.setName("New Thread");
+        System.out.println("New thread name = " + myThread.getName());
     }
 }
