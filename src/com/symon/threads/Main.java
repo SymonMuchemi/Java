@@ -1,6 +1,5 @@
 package com.symon.threads;
 
-import javax.swing.plaf.TableHeaderUI;
 
 public class Main {
     // a thread is a light weight sub-process
