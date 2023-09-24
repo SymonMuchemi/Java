@@ -20,5 +20,15 @@ public class Main {
 
         //checking if thread is alive
         System.out.println(Thread.currentThread().isAlive());
+
+        for (int i = 3; i > 0 ; i--) {
+            System.out.println("i = " + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        System.out.println("You are done!");
     }
 }
