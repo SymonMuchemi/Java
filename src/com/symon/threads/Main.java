@@ -33,6 +33,7 @@ public class Main {
 
         // creating a new thread
         MyThread myThread = new MyThread();
+        myThread.start();
         System.out.println(myThread.isAlive());
     }
 }
