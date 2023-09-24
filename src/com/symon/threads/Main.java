@@ -15,20 +15,24 @@ public class Main {
 //        System.out.println(Thread.currentThread().getPriority());
 
         // changing the priority of the current thread
-        Thread.currentThread().setPriority(2);
-        System.out.println(Thread.currentThread().getPriority());
+//        Thread.currentThread().setPriority(2);
+//        System.out.println(Thread.currentThread().getPriority());
+//
+//        //checking if thread is alive
+//        System.out.println(Thread.currentThread().isAlive());
+//
+//        for (int i = 3; i > 0 ; i--) {
+//            System.out.println("i = " + i);
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+//        System.out.println("You are done!");
 
-        //checking if thread is alive
-        System.out.println(Thread.currentThread().isAlive());
-
-        for (int i = 3; i > 0 ; i--) {
-            System.out.println("i = " + i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        System.out.println("You are done!");
+        // creating a new thread
+        MyThread myThread = new MyThread();
+        System.out.println(myThread.isAlive());
     }
 }
