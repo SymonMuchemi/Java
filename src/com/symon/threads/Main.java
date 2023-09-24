@@ -40,7 +40,7 @@ public class Main {
         MyThread myThread = new MyThread();
         // setting myThread to be a daemon thread
         myThread.setDaemon(true);
-        myThread.start();
+        myThread.run();
         System.out.println(myThread.isAlive());
 
         // getting the name of the newly created thread
