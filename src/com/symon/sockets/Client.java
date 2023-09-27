@@ -15,6 +15,7 @@ public class Client {
 
         try {
             System.out.println("Client started");
+            //noinspection resource
             Socket socket = new Socket("localhost", 9806);
 
             //read data from the keyboard
