@@ -8,6 +8,7 @@ import java.net.Socket;
 
 public class Client {
     public static void main(String[] args) {
+        Socket socket;
         String string;
         BufferedReader userInput;
         BufferedReader socketInput;
@@ -16,7 +17,7 @@ public class Client {
         try {
             System.out.println("Client started");
             //noinspection resource
-            Socket socket = new Socket("localhost", 9806);
+             socket = new Socket("localhost", 9806);
 
             //read data from the keyboard
             userInput = new BufferedReader(new InputStreamReader(System.in));
