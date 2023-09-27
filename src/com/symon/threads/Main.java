@@ -58,7 +58,7 @@ public class Main {
         // checking if main thread is a daemon thread
         System.out.println(Thread.currentThread().isDaemon());
 
-        System.out.println(myThread.currentThread().isDaemon());
+        System.out.println(Thread.currentThread().isDaemon());
 
     }
 }
